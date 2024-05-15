@@ -9,7 +9,7 @@ Widget::Widget(QWidget *parent)
 
     ui->pushButton_Disconnect->setDisabled(true); // 初始时 ，断开连接按钮不可用
 
-    ui->lineEdit_Port->setText("30003"); // 默认端口
+    ui->lineEdit_Port->setText("8081"); // 默认端口
     ui->lineEdit_IP->setText("127.0.0.1"); // 默认ip
     ui->textEdit_SendMessage->setPlaceholderText("请输入指令");
 
