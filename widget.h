@@ -5,6 +5,9 @@
 #include <QTcpSocket>
 #include <QString>
 #include <QHostAddress>
+#include "clientjson.h"
+
+extern clientJSON *clientjson;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -18,13 +21,12 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
-    void readData();
+public slots:
+    void slot_freshJsonDataUI(QString[]);
 
 private slots:
     void on_pushButton_Connect_clicked();
-
     void on_pushButton_Disconnect_clicked();
-
     void on_pushButton_Send_clicked();
 
 private:
